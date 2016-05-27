@@ -9,6 +9,10 @@
             max-width: 33%;
             margin-left: 0.3vw;
         }
+
+        .preview-div {
+            display: inline;
+        }
     </style>
 </head>
 <body>
@@ -16,9 +20,10 @@
 <form enctype="multipart/form-data" method="post" name="fileinfo">
     <input id="photos" type="file" name="file[]" required multiple/>
     <input type="submit" value="Stash the file!"/>
-    <div style="margin: auto" id="show-img"></div>
+    
 </form>
 
+<div id="show-img"></div>
 
 </body>
 <script>
@@ -32,7 +37,7 @@
         oReq.onload = function () {
             if (oReq.status == 200) {
                 for (var item = 0; item < photos.files.length; item++) {
-                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img class='img-preview' src='photos/" + photos.files[item].name + "'>";
+                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<div class='preview-div'><img class='img-preview' src='photos/" + photos.files[item].name + "'><\/div>";
                 }
             }
         };
