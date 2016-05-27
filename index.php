@@ -3,6 +3,11 @@
 <head>
     <title>Upload file using Ajax</title>
     <meta charset="utf-8">
+    <style>
+        .img-preview {
+            max-width: 40%;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,8 +30,7 @@
         oReq.onload = function () {
             if (oReq.status == 200) {
                 for (var item = 0; item < photos.files.length; item++) {
-                    alert(item);
-                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img src='photos/" + photos.files[item].name + "'>";
+                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img class='img-preview' src='photos/" + photos.files[item].name + "'>";
                 }
             }
         };
