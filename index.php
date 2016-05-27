@@ -26,7 +26,7 @@
             if (oReq.status == 200) {
                 for (var item = 0; item < photos.files.length; item++) {
                     alert(item);
-                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img src='photos/" + photos.files[item].name + "'><br>";
+                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img src='photos/" + photos.files[item].name + "'>";
                 }
             }
         };
