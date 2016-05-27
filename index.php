@@ -8,8 +8,7 @@
 
 <form enctype="multipart/form-data" method="post" name="fileinfo">
     <input id="photos" type="file" name="file[]" required multiple/>
-    <input type="submit" value="Stash the file!"/>
-    <div id="show-img"></div>
+    <input type="submit" value="Upload files!"/>
 </form>
 <div></div>
 
@@ -22,14 +21,6 @@
         var oData = new FormData(form);
         var oReq = new XMLHttpRequest();
         oReq.open("POST", "system/upload.php", true);
-        oReq.onload = function () {
-            if (oReq.status == 200) {
-                for (var item = 0; item < photos.file.length; item++) {
-                    alert(item);
-                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img src='photos/" + photos.file.files[item].name + "'><br>";
-                }
-            }
-        };
         oReq.send(oData);
         ev.preventDefault();
     }, false);
