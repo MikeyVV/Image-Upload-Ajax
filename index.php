@@ -24,9 +24,9 @@
         oReq.open("POST", "system/upload.php", true);
         oReq.onload = function () {
             if (oReq.status == 200) {
-                for (var item = 0; item < photos.elements.length; item++) {
+                for (var item = 0; item < photos.files.length; item++) {
                     alert(item);
-                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img src='photos/" + photos.file.files[item].name + "'><br>";
+                    document.getElementById("show-img").innerHTML = document.getElementById("show-img").innerHTML + "<img src='photos/" + photos.files[item].name + "'><br>";
                 }
             }
         };
