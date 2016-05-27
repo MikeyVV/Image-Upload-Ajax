@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .img-preview {
-            max-height: 33%;
+            max-width: 33%;
             margin-left: 0.3vw;
         }
     </style>
