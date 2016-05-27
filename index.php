@@ -3,9 +3,11 @@
 <head>
     <title>Upload file using Ajax</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .img-preview {
-            max-width: 40%;
+            max-width: 33%;
+            margin-left: 0.3vw;
         }
     </style>
 </head>
@@ -14,9 +16,9 @@
 <form enctype="multipart/form-data" method="post" name="fileinfo">
     <input id="photos" type="file" name="file[]" required multiple/>
     <input type="submit" value="Stash the file!"/>
-    <div id="show-img"></div>
+    <div style="margin: auto" id="show-img"></div>
 </form>
-<div></div>
+
 
 </body>
 <script>
